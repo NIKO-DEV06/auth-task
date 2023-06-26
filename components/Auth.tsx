@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import google from "@/assets/google.svg";
-
 import facebook from "@/assets/Facebook.svg";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -56,6 +55,7 @@ const Auth = () => {
     const provider = new GoogleAuthProvider();
     try {
       await signInWithPopup(auth, provider);
+      router.push("/welcome");
     } catch (error) {}
   };
 
@@ -64,6 +64,7 @@ const Auth = () => {
     const provider = new FacebookAuthProvider();
     try {
       await signInWithPopup(auth, provider);
+      router.push("/welcome");
     } catch (error) {}
   };
 
