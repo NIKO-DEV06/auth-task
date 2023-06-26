@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import google from "@/assets/google.svg";
-import apple from "@/assets/Apple.svg";
+
 import facebook from "@/assets/Facebook.svg";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -104,9 +104,6 @@ const Auth = () => {
           or
         </p>
         <div className="flex w-full justify-center gap-[1rem]">
-          <button className="bg-black w-full py-[1rem] rounded-xl">
-            <Image src={apple} alt="apple" className="mx-auto" />
-          </button>
           <button
             onClick={signInWithGoogle}
             className="bg-white w-full border-[1px] border-gray-300 py-[1rem] rounded-xl"
